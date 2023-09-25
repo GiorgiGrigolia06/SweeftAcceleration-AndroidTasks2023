@@ -8,7 +8,6 @@
  */
 
 fun notContains(array: IntArray): Int {
-
     array.sort()
     var smallestMissingNumber = 1
 
