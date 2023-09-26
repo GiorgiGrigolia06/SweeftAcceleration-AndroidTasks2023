@@ -23,7 +23,6 @@ class MyDataStructure<T> {
     private var tail: Node<T>? = null
 
     fun add(element: T) {
-
         if (data.containsKey(element)) {
             return
         }
