@@ -15,8 +15,7 @@ fun singleNumber(numArray: IntArray): Int {
 fun main() {
     val numArray = intArrayOf(1, 1, 3, 3, 222, 5, 5, 6, 6)
     val uniqueNumber = singleNumber(numArray)
-    if (uniqueNumber == 0) println("The array does not contain a unique number.")
-    else println("The unique number is $uniqueNumber.")
+    println("The unique number is $uniqueNumber.")
 }
 
 
