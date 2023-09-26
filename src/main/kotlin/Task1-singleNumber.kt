@@ -8,7 +8,7 @@
 
 fun singleNumber(numArray: IntArray): Int {
     var uniqueNumber = 0
-    for (num in numArray) uniqueNumber = uniqueNumber xor num
+    numArray.forEach { uniqueNumber = uniqueNumber xor it }
     return uniqueNumber
 }
 

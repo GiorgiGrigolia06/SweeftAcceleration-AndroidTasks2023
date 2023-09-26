@@ -13,10 +13,10 @@ fun minSplit(amount: Int): Int {
     var remainingAmount = amount
     var coinCount = 0
 
-    for (coin in listOfCoins) {
-        while (remainingAmount >= coin) {
-            remainingAmount -= coin
-            coinCount++
+    listOfCoins.forEach { coinValue ->
+        while (remainingAmount >= coinValue) {
+            remainingAmount -= coinValue
+            coinCount ++
         }
     }
 
