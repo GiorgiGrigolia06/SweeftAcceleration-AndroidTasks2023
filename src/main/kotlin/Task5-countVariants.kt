@@ -15,28 +15,39 @@
  * Function updates "previous" and "current" for the next iteration.
  *
  * Step 3: The final value of "current" represents the total number of variants to climb "numberOfStairs" stairs efficiently.
+ *
+ * Note: The use of BigInteger in this implementation allows for the calculation of variants for extremely large values
+ * of "numberOfStairs" without encountering overflow. It may consume a large amount of memory, though.
+ *
+ * Fun fact: This function can even calculate the possible variants to fully cover the Niesen Mountain Staircase,
+ * which is the largest in the world with 11,674 stairs.
  */
 
-fun countVariants(numberOfStairs: Int): Long {
-    if (numberOfStairs <= 2)
-        return numberOfStairs.toLong()
+import java.math.BigInteger
 
-    var previous = 1L
-    var current = 2L
+fun countVariants(numberOfStairs: BigInteger): BigInteger {
+    if (numberOfStairs <= BigInteger.TWO)
+        return numberOfStairs
 
-    for (i in 3..numberOfStairs) {
+    var previous = BigInteger.ONE
+    var current = BigInteger.TWO
+
+    var i = BigInteger.valueOf(3)
+
+    while (i <= numberOfStairs) {
         val next = previous + current
         previous = current
         current = next
+        i = i.add(BigInteger.ONE)
     }
 
     return current
 }
 
 fun main() {
-    val numberOfStairs = 12
+    val numberOfStairs = BigInteger.valueOf(12)
     val variants = countVariants(numberOfStairs)
-    if (variants in 0L..1L) println("There is $variants possible variant to climb $numberOfStairs stair.")
+    if (variants in BigInteger.ZERO..BigInteger.ONE) println("There is $variants possible variant to climb $numberOfStairs stair.")
     else println("There are $variants possible variants to climb $numberOfStairs stairs.")
 }
 
