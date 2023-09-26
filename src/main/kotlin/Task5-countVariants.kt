@@ -1,23 +1,8 @@
 /**
- * At first, I decided to use recursion, but due to the inefficiency of
- * the recursive approach for large values, I opted to use dynamic programming.
- * The recursive function below works properly, but it fails on large inputs.
- */
-
-/* RECURSIVE VERSION 👇
-fun countVariants(numberOfStairs: Int): Int {
-    if (numberOfStairs <= 2)
-        return numberOfStairs
-
-    return countVariants(numberOfStairs - 1) + countVariants(numberOfStairs - 2)
-}
-*/
-
-/**
- * This function calculates the number of possible variants to climb a staircase with a given number of "numberOfStairs".
+ * The function below calculates the number of possible variants to climb a staircase with a given number of "numberOfStairs".
  *
  * Step 1: Check if there are 0, 1, or 2 stairs.
- * If there are 0 stairs, there's no way to climb, so the answer is 0 variants.
+ * If there are 0 stairs, there's no way to climb, so the answer is 0 variant.
  * If there's only 1 stair, there's only one way to climb it, which is by taking one step, so the answer is 1 variant.
  * If there are 2 stairs, there are 2 possible ways: either take two steps at once or take one step, then another step.
  * In this case, the answer is 2 variants.
@@ -54,3 +39,18 @@ fun main() {
     if (variants in 0L..1L) println("There is $variants possible variant to climb $numberOfStairs stair.")
     else println("There are $variants possible variants to climb $numberOfStairs stairs.")
 }
+
+
+/**
+ * At first, I decided to use recursion, but due to the inefficiency of
+ * the recursive approach for large values, I opted to use dynamic programming.
+ * The recursive function below works properly, but it fails on large inputs.
+ *
+ * RECURSIVE VERSION:
+    fun countVariants(numberOfStairs: Int): Int {
+        if (numberOfStairs <= 2)
+            return numberOfStairs
+
+        return countVariants(numberOfStairs - 1) + countVariants(numberOfStairs - 2)
+    }
+*/
