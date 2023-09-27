@@ -17,7 +17,7 @@
  * Step 3: The final value of "current" represents the total number of variants to climb "numberOfStairs" stairs efficiently.
  *
  * Note: The use of BigInteger in this implementation allows for the calculation of variants for extremely large values
- * of "numberOfStairs" without encountering overflow. It may consume a large amount of memory, though.
+ * of "numberOfStairs" without encountering overflow. It may consume a large amount of memory on huge values, though.
  *
  * Fun fact: This function can even calculate the possible variants to fully cover the Niesen Mountain Staircase,
  * which is the largest in the world with 11,674 stairs.

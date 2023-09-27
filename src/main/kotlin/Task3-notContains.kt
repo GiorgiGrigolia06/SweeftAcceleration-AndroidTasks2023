@@ -1,5 +1,5 @@
 /**
- * This function finds the smallest positive whole number that is not present in the given array of integers.
+ * This function finds the smallest positive whole number that is not present in the given [IntArray].
  * It uses a boolean array to track the presence of positive whole numbers in the input array,
  * and it returns the smallest missing positive whole number.
  */
@@ -17,7 +17,8 @@ fun notContains(numArray: IntArray): Int {
             return i
 
     /*
-     * Returns the smallest missing positive whole
+     * If value is not returned in the previous loop,
+     * function returns the smallest missing positive whole
      * number beyond the range of numbers in the array.
      */
     return n + 1

@@ -2,8 +2,8 @@
  * This function calculates the minimum number of coins required to represent a given amount.
  * It defines a list of coins in descending order.
  * Then, the variables are implemented to keep track of remaining amount and the coin count.
- * Next step is to iterate through each coin using for loop.
- * Inside a for loop, a while loop checks if the remaining amount is greater than or equal to the current coin value.
+ * Next step is to iterate through each coin using forEach loop.
+ * Inside a forEach loop, a while loop checks if the remaining amount is greater than or equal to the current coin value.
  * If true, it will subtract the coin value from the remaining amount and increment the coin count.
  */
 

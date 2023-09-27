@@ -1,7 +1,7 @@
 /**
  * This function finds a unique number in an array of numbers.
  * It uses XOR to do this efficiently.
- * It starts with a result of 0 and XORs it with each number in the list.
+ * It starts with a uniqueNumber of 0 and XORs it with each number in the [IntArray].
  * When you XOR the same number twice, it cancels out and leaves you with the unique one.
  * Finally, it returns the unique number.
  */
