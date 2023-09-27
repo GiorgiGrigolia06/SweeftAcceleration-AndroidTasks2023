@@ -38,7 +38,7 @@ fun countVariants(numberOfStairs: BigInteger): BigInteger {
         val next = previous + current
         previous = current
         current = next
-        i = i.add(BigInteger.ONE)
+        i += BigInteger.ONE
     }
 
     return current
